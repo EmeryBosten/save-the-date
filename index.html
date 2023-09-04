@@ -10,7 +10,7 @@
     padding: 0;
     background-size: contain;
     background-position: center;
-	background-image: url('background3.jpg');
+	background-image: url('background3.JPG');
     font-family: Lucida Handwriting, Cursive;
     color: white;
     transition: background-image 1s ease;
@@ -72,8 +72,7 @@
   </div>
   
   <script>
-    let backgroundInterval; 
-    const backgrounds = ['background3.jpg', 'background4.jpg', 'background5_bw.jpg'];
+    const backgrounds = ['background3.JPG', 'background4.jpg', 'background5_bw.jpg'];
     let currentIndex = 0;
 
     function changeBackground() {
@@ -88,7 +87,7 @@
       }
     }
 
-    setInterval(changeBackground, 7000); // Change every 7 seconds
+    const backgroundInterval = setInterval(changeBackground, 7000);// Change every 7 seconds
   </script>
 </body>
 </html>
