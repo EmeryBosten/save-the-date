@@ -8,9 +8,9 @@
   body {
     margin: 0;
     padding: 0;
-    background-image: url('background3.jpg');
     background-size: contain;
     background-position: center;
+	background-image: url('background3.jpg');
     font-family: Lucida Handwriting, Cursive;
     color: white;
     transition: background-image 1s ease;
@@ -72,6 +72,7 @@
   </div>
   
   <script>
+    let backgroundInterval; 
     const backgrounds = ['background3.jpg', 'background4.jpg', 'background5_bw.jpg'];
     let currentIndex = 0;
 
