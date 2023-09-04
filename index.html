@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Save the Date</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+	background-image: url('background3.jpg');
+    background-size: contain;
+    background-position: center;
+    font-family: Lucida Handwriting, Cursive;
+    color: white;
+	transition: background-image 1s ease;
+  }
+  
+ 
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .content {
+    text-align: center;
+    padding: 100px;
+	opacity: 0;
+    animation: fadeIn 1s ease, fadeInText 1s ease forwards;
+  }
+  @keyframes fadeInText {
+    0%, 20% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .event-date,
+  .event-title,
+  .event-details {
+    margin: 0;
+    opacity: 0;
+  }
+.event-date {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    animation: fadeInText 5s ease forwards 1s;
+  }
+  .event-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInText 7s ease forwards 5s;
+  }
+  .event-details {
+    font-size: 1.5rem;
+    animation: fadeInText 12s ease forwards 12s;
+  }
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="event-date">Save the Date</div>
+    <div class="event-title">Lisa & Emery's Wedding</div>
+    <div class="event-details">
+      Join us in celebrating the joyous occasion of our wedding!
+      <br>
+      Date: August 31, 2024
+      <br>
+      Venue: Maison Visavis, Eupener Straße 6, 4731 Raeren
+    </div>
+  </div>
+  <script>
+    const backgrounds = ['background3.jpg', 'background4.jpg', 'background5_bw.jpg'];
+    let currentIndex = 0;
+
+    function changeBackground() {
+	    if (currentIndex === backgrounds.length) {
+			return; // Stop changing when the last image is reached
+		 }
+		document.body.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+		currentIndex++
+	  
+	  if (currentIndex === backgrounds.length) {
+        clearInterval(backgroundInterval); // Stop the interval when the last image is reached
+      }
+    }
+
+    setInterval(changeBackground, 7000); // Change every 7 seconds
+  </script>
+</body>
+</html>
