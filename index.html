@@ -10,7 +10,7 @@
     padding: 0;
     background-size: contain;
     background-position: center;
-    background-image: url('background4.jpg');
+	background-image: url('background4.jpg');
     font-family: Lucida Handwriting, Cursive;
     color: White;
     transition: background-image 1.5s ease;
@@ -55,7 +55,7 @@
     margin: 0;
     opacity: 0;
     font-size: 2rem;
-    animation: fadeInText 12s ease forwards 12s;
+    animation: fadeInText 9s ease forwards 10s;
   }
   
 </style>
@@ -90,7 +90,7 @@
         clearInterval(backgroundInterval); // Stop the interval when the last image is reached
       }
     }
-	const backgroundInterval = setInterval(changeBackground, 7000); // Change every 7 seconds
+	const backgroundInterval = setInterval(changeBackground, 6000); // Change every 7 seconds
   </script>
 </body>
 </html>
