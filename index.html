@@ -10,10 +10,10 @@
     padding: 0;
     background-size: contain;
     background-position: center;
-    background-image: url('background3.JPG');
+	background-image: url('background4.JPG');
     font-family: Lucida Handwriting, Cursive;
-    color: white;
-    transition: background-image 1s ease;
+    color: White;
+    transition: background-image 1.5s ease;
   }
   
  
@@ -30,28 +30,31 @@
   
   .event-date {
     text-align: center;
+	text-shadow: 1px 1px 1px black;
     padding: 50px;
 	margin: 0;
     opacity: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 10px;
     animation: fadeInText 5s ease forwards 1s;
   }
   .event-title {
     text-align: center;
+	text-shadow: 1px 1px 1px black;
     padding: 50px;
     margin: 0;
     opacity: 0;
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 20px;
     animation: fadeInText 7s ease forwards 5s;
   }
   .event-details {
     text-align: center;
+	text-shadow: 1px 1px 1px black;
     padding: 50px;
     margin: 0;
     opacity: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     animation: fadeInText 12s ease forwards 12s;
   }
   
@@ -72,7 +75,8 @@
   </div>
   
   <script>
-    const backgrounds = ['background3.JPG', 'background4.jpg', 'background5_bw.jpg'];
+
+    const backgrounds = ['background4.JPG', 'background2.jpg', 'background5_bw.jpg'];
     let currentIndex = 0;
 
     function changeBackground() {
@@ -86,9 +90,7 @@
         clearInterval(backgroundInterval); // Stop the interval when the last image is reached
       }
     }
-
-const backgroundInterval = setInterval(changeBackground, 7000);// Change every 7 seconds
-
+	const backgroundInterval = setInterval(changeBackground, 7000); // Change every 7 seconds
   </script>
 </body>
 </html>
